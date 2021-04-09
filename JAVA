@@ -1,0 +1,40 @@
+ class A {
+    A(){
+        System.out.println("A类无参数构造方法");
+    }
+    A(int x){
+        System.out.println("A类1参数构造方法");
+    }
+    A(int x,int y){
+        System.out.println("A类2参数构造方法");
+    }
+}
+class B extends A {
+    B(){
+        System.out.println("B类无参数构造方法");
+    }
+    B(int x){
+        System.out.println("B类1参数构造方法");
+    }
+     B(int x,int y){
+        System.out.println("B类2参数构造方法");
+    }
+}
+class C extends B{
+     C(){    super(1,2);
+         System.out.println("C类无参数的构造方法");
+     }
+     C(int x){
+
+             System.out.println("C类1参数的构造方法");
+     }
+     C(int x,int y){
+         System.out.println("C类2参数的构造方法");
+     }
+}
+ public class Text {
+     public static void main(String[] args) {
+           B b=new B();
+            C c=new C();
+     }
+ }
