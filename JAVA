@@ -1,1 +1,21 @@
+public class StaticVariable {
+    static int x;
+    int y;
+    public StaticVariable(int x,int y){
+        this.x=x;
+        this.y=y;
+    }
+
+    public static void main(String[] args) {
+        StaticVariable a=new StaticVariable(8,3);
+        StaticVariable b=new StaticVariable(18,108);
+
+        System.out.println("x的值："+a.x);
+        System.out.println("y的值："+a.y);
+
+        System.out.println("x的值："+b.x);
+        System.out.println("y的值："+b.y);
+//说明静态变量之间共享
+    }
+}
 
