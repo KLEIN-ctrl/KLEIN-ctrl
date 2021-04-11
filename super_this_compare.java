@@ -46,3 +46,47 @@ public class Country {
 }
 //这个和this的用法相同都是调用成员变量
 //如果不调用父类方法value（），只调用父类变量name的话，则父类name值嵌套为null
+
+
+
+
+
+public class Person {
+    public Person(){
+       System.out.println();
+    }
+    static class person{
+        public  void prt(String s){
+            System.out.println();
+        }
+        person(){
+            prt("父类·无参数构造方法："+"A.person");
+        }//构造方法（—）
+        person(String name){
+            prt("父类·含一个参数构造方法："+"A.person"+name);
+        }//构造方法（2）
+        public  class Chinese extends Person{
+            Chinese(){
+                super();//调用父类构造方法（1）
+                prt("子类·调用父类无参数构造方法"+"A.chinese coder");
+            }
+            Chinese(String name){
+                super();
+                prt("子类·调用父类含一个参数的构造方法："+"his name is "+name);
+
+            }
+            Chinese(String name,int age){
+                this(name);
+                prt("子类：调用子类具有相同形参的构造方法："+"his name is "+name);
+            }
+
+            public  void main(String[] args) {
+                Chinese cn=new Chinese();
+                cn=new Chinese("codersai");
+                cn=new Chinese("codersai",110);
+            }
+
+
+        }
+    }
+}
