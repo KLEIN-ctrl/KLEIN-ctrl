@@ -7,7 +7,7 @@ public class Text {
     }
     public int getAge(int age){
         this.age=age;
-        return this.age;
+        return this.age;//this的方法也就是引用成员变量，然后输出他
     }
 
     public static void main(String[] args) {
@@ -16,7 +16,6 @@ public class Text {
     }
 
 }
-//this的方法也就是引用成员变量，然后输出他
 
 
 
@@ -35,7 +34,7 @@ public class Country {
             super.value();//调用父类的方法
             name="Shanghai";
             System.out.println(name);
-            System.out.println(super.name);
+            System.out.println(super.name);//调用父类的成员变量
         }
 
         public static void main(String[] args) {
