@@ -1,4 +1,5 @@
- class A {
+//这是super的用法之一（第三条）super被重构的对象方法
+class A {
      String name;
     public String getName(){
        return name;
@@ -30,8 +31,11 @@
          }
      }
 }
-这上面是super的用法之一（第三条）super被重构的对象方法
 
+
+
+
+//这是this.对象变量名
 public class Oops {
    String name;
     public Oops(String name1){
@@ -47,7 +51,6 @@ public class Oops {
 
     }
 }
-这是this.对象变量名
 
 
 
