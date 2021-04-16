@@ -32,9 +32,9 @@ public class Country {
         @Override
         void value() {
             super.value();//调用父类的方法
-            name="Shanghai";
-            System.out.println(name);
-            System.out.println(super.name);//调用父类的成员变量
+            name="Shanghai";//赋给name，但是name父类也用了，那么，这就是方法重写中的属性的隐藏
+            System.out.println(name);//这个就是子类中的“name”了，不是父类中的，虽然是同一个
+            System.out.println(super.name);//调用父类的成员变量，与子类区分，用关键字super
         }
 
         public static void main(String[] args) {
