@@ -22,7 +22,7 @@ class E extends d{
     }
 }
 
-public class Look {
+public class A1 {
     public static void main(String[] args) {
         E e=new E();
         System.out.println("E是d的子类吗？"+(e instanceof d));
