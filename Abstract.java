@@ -42,3 +42,103 @@ public class Mission {
     }
 
 }
+
+
+
+
+
+
+   abstract class Animals{
+
+    abstract  public void eat();
+    abstract  public void reproduce();
+   }
+   abstract  class Bird extends Animals{
+    String feather;
+    abstract  public void move();
+    public void growFeather(String feather){
+        this.feather=feather;
+        System.out.println("我有"+feather+"羽毛");
+    }
+
+       @Override
+       public void eat() {
+           System.out.println();
+       }
+
+       @Override
+       public void reproduce() {
+           System.out.println("我会下蛋");
+       }
+   }
+   class SeaBird extends Bird{
+
+       @Override
+       public void move() {
+           System.out.println("海鸥飞翔");
+       }
+
+       @Override
+       public void eat() {
+           super.eat();
+           System.out.println("海鸥吃鱼");
+       }
+
+       @Override
+       public void growFeather(String feather) {
+           super.growFeather("白色");
+       }
+
+       @Override
+       public void reproduce() {
+           super.reproduce();
+       }
+
+   }
+   class Chicken extends Bird{
+       @Override
+       public void move() {
+           System.out.println("小鸡快跑");
+       }
+
+       @Override
+       public void growFeather(String feather) {
+           super.growFeather("黄色");
+       }
+
+       @Override
+       public void eat() {
+           super.eat();
+           System.out.println("小鸡吃米");
+       }
+
+       @Override
+       public void reproduce() {
+           super.reproduce();
+       }
+   }
+    public class Demo {
+        public static void main(String[] args) {
+            Chicken c1=new Chicken();
+            c1.eat();
+            c1.move();
+            c1.reproduce();
+            c1.growFeather("黄色");
+        }
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
