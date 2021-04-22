@@ -17,12 +17,12 @@ public class DecimalFormatSimpleDemo {
     }
 
     public static void main(String[] args) {
-        format("###",123);
+        format("####",123);//#不占格，还得123
         format("000",123);
 
-        format("0000",123);
+        format("0000",123);//0占格 所以0123
 
         format("##,##",12345.678);
-        format("0.00\u2030",0.0789);
+        format("0.00\u2030",0.0789);//\u2030指的是千分数
     }
 }
