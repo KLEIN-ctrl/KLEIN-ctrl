@@ -1,0 +1,32 @@
+//TODO:final修饰的变量不能调用，final方法也不嫩再次调用（或者说是不能覆盖）
+class Parents{
+    private final void doit(){
+        System.out.println("父类.doit()");
+    }
+    final void doit2(){
+       System.out.println("父类.doit2()");
+    }
+    public void doit3(){
+        System.out.println("父类.doit3()");
+    }
+}
+class Sub extends Parents{
+    private final void doit(){
+        System.out.println("子类.doit()");
+    }
+    public  void doit3(){
+        System.out.println("子类.doit()");
+    }
+
+}
+public class FinalMethod {
+    public static void main(String[] args) {
+        Sub s =new Sub();
+        s.doit2();
+        Parents p=s;
+        p.doit2();
+        p.doit3();
+
+    }
+}
+//可见子类中的doit方法并不是正常覆盖，而是产生了一个新方法。什么意思，能否解释一下，
