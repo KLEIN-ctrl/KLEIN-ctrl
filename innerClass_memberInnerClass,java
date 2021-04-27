@@ -1,0 +1,26 @@
+public class OuterClass{//定义一个外部类
+   innerClass in=new innerClass();//使内部类实例化
+    public void out(){//调用内部类的方法
+        in.inf();
+    }
+    class innerClass{//创建一个内部类
+        innerClass(){//创建一个构造方法
+        }
+        public void inf(){//创建一个成员方法
+            }
+            int y=0;
+    }
+    public innerClass doit(){//外部方法
+       in.inf();
+       return new innerClass(); //返回内部类引用
+    }
+
+    public static void main(String[] args) {
+        OuterClass outerClass=new OuterClass();
+        //内部类的对象实例化操作必须在外部类或外部类的非静态方法中实现
+        OuterClass.innerClass in= outerClass.doit();
+        OuterClass.innerClass in2=outerClass.new innerClass();
+    }
+}
+//若外部类创建了一个private的私有制的变量，可以在内部类中随意使用
+//但是在内部类中的成员变量，是不能在外部类里使用的
