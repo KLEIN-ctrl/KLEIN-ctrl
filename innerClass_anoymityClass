@@ -1,0 +1,23 @@
+//TODO：匿名内部类
+
+interface  OutInterfance2{
+
+}
+public class OutClass4 {
+    public OutInterface2 doit(){//创建了一个匿名内部类
+        //return new innerClass2();
+        return new OutInterface2(){
+            int i=0;
+            public int getValue(){
+                return i;
+            }
+        };
+    }
+}
+class innerClass2 implements  OutInterface2{
+    private int i=0;
+    public  int getValue(){
+        return i;
+        
+    }
+}
