@@ -14,10 +14,11 @@ public class OutClass4 {
         };
     }
 }
-class innerClass2 implements  OutInterface2{
+/*class innerClass2 implements  OutInterface2{
     private int i=0;
     public  int getValue(){
         return i;
         
     }
-}
+}*/
+//以上有两种方法来表示匿名内部类，不加注释的符号，是匿名内部类，注意，这个常用
