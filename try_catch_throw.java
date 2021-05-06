@@ -1,3 +1,4 @@
+//TODO:此类，是运用了throw的用法，但是自定义异常（NoHumansException)
 import javax.swing.*;
 import java.io.PrintWriter;
 
@@ -41,3 +42,4 @@ public class NonHumansException  extends  Exception{//自己创建一个API文�
     }
 
 }
+
